@@ -4,70 +4,49 @@ Autor: PHABLO H REIS
 Contato:admmicroreisinformatica@gmail.com
 versão: 0.1
 */
-
-
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ini_set("display_errors", 1 );
 
+	if(isset($_POST['somar'])) {
 
+		$a = $_POST['m1'];
+		$n1 = $_POST['m1']*'0.05';
 
+		$b = $_POST['m2'];
+		$n2 = $_POST['m2']*'0.10';
 
+		$c = $_POST['m3'];
+		$n3 = $_POST['m3']*'0.25';
 
-if(isset($_POST['somar'])) {
+		$d = $_POST['m4'];
+		$n4 = $_POST['m4']*'0.50';
 
-$a = $_POST['m1'];
-$n1 = $_POST['m1']*'0.05';
+		$e = $_POST['m5'];
+		$n5 = $_POST['m5']*'1.00';
 
-$b = $_POST['m2'];
-$n2 = $_POST['m2']*'0.10';
+		$f = $_POST['m6'];
+		$n6 = $_POST['m6']*'2.00';
 
-$c = $_POST['m3'];
-$n3 = $_POST['m3']*'0.25';
+		$g = $_POST['m7'];
+		$n7 = $_POST['m7']*'5.00';
 
-$d = $_POST['m4'];
-$n4 = $_POST['m4']*'0.50';
+		$h = $_POST['m8'];
+		$n8 = $_POST['m8']*'10.00';
 
-$e = $_POST['m5'];
-$n5 = $_POST['m5']*'1.00';
+		$i = $_POST['m9'];
+		$n9 = $_POST['m9']*'20.00';
 
-$f = $_POST['m6'];
-$n6 = $_POST['m6']*'2.00';
+		$j = $_POST['m10'];
+		$n10 = $_POST['m10']*'50.00';
 
-$g = $_POST['m7'];
-$n7 = $_POST['m7']*'5.00';
+		$l = $_POST['m11'];
+		$n11 = $_POST['m11']*'100.00';
 
-$h = $_POST['m8'];
-$n8 = $_POST['m8']*'10.00';
+		$res = $n1+$n2+$n3+$n4+$n5+$n6+$n7+$n8+$n9+$n10+$n11;
+	}else{
 
-$i = $_POST['m9'];
-$n9 = $_POST['m9']*'20.00';
-
-$j = $_POST['m10'];
-$n10 = $_POST['m10']*'50.00';
-
-$l = $_POST['m11'];
-$n11 = $_POST['m11']*'100.00';
-
-$res = $n1+$n2+$n3+$n4+$n5+$n6+$n7+$n8+$n9+$n10+$n11;
-
-
-
-}else{
-
-$_POST['m1'] = 0;
-$_POST['m2'] = 0;
-$_POST['m3'] = 0;
-$_POST['m4'] = 0;
-$_POST['m5'] = 0; 
-$_POST['m6'] = 0;
-$_POST['m7'] = 0;
-$_POST['m8'] = 0;
-$_POST['m9'] = 0;
-$_POST['m10'] = 0;
-$_POST['m11'] = 0;
-$_POST['somar'] = 0;
-
-}
+		$erro = "Algo não esta correto nas operações";	
+	}
 
  ?>
 
@@ -106,7 +85,15 @@ $_POST['somar'] = 0;
 
 
 <div align="center">
-
+	
+	<div class="alert alert-danger alert-dismissible fade show col-lg-4 text-left" role="alert">
+		<h6 class="alert-heading ">Atenção!</h6>
+  <?php echo $erro; ?>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="divdir"></div>
 	<form method="Post">
 		<input type="hidden" name="somar" value="0">
 		
