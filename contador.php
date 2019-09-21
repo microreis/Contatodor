@@ -45,7 +45,11 @@ ini_set("display_errors", 1 );
 		$res = $n1+$n2+$n3+$n4+$n5+$n6+$n7+$n8+$n9+$n10+$n11;
 	}else{
 
-		$erro = "Algo não esta correto nas operações";	
+		$erro = ' <div class="alert alert-danger alert-dismissible fade show col-lg-4 text-left" role="alert">
+		<h6 class="alert-heading ">Atenção!</h6>Algo não esta correto nas operações <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>';	
 	}
 
  ?>
@@ -86,13 +90,9 @@ ini_set("display_errors", 1 );
 
 <div align="center">
 	
-	<div class="alert alert-danger alert-dismissible fade show col-lg-4 text-left" role="alert">
-		<h6 class="alert-heading ">Atenção!</h6>
+	
   <?php echo $erro; ?>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+ 
 <div class="divdir"></div>
 	<form method="Post">
 		<input type="hidden" name="somar" value="0">
