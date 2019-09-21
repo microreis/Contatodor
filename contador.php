@@ -1,4 +1,9 @@
 <?php
+/*
+Autor: PHABLO H REIS
+Contato:admmicroreisinformatica@gmail.com
+versão: 0.1
+*/
 
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
