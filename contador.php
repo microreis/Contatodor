@@ -194,7 +194,7 @@ ini_set("display_errors", 1 );
 
 		<div class="divdir"></div>
 		<div align="center" class="input-group col-lg-4">
-		<input class="btn btn-primary btn-lg" type="submit" name="submit" value="calcular">
+		<input class="btn btn-primary btn-lg" type="submit" name="submit" value="Calcular">
 
 		</div>
 	</form>
